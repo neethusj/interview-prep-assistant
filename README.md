@@ -45,8 +45,10 @@ pip install -r requirements.txt
 
 ### 4. Create a `.env` file in the project root
 
+```
 GEMINI_API_KEY=your_gemini_key_here
 TAVILY_API_KEY=your_tavily_key_here
+```
 
 ### 5. Run the app
 
@@ -62,6 +64,7 @@ This is a personal-use tool by design. All data (your goal, session history, sco
 
 ## Project Structure
 
+```
 interview_prep_assistant/
 ├── app.py
 ├── orchestrator.py
@@ -77,3 +80,4 @@ interview_prep_assistant/
 ├── .gitignore
 ├── README.md
 └── data/user_data.json
+```
