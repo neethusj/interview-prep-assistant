@@ -62,6 +62,11 @@ if st.button("Generate Questions"):
     if goal:
         questions = generate_questions()
         st.session_state["questions"] = questions
+        # Reset all previous session state so old interview doesn't linger
+        st.session_state["current_index"] = 0
+        st.session_state["answers"] = []
+        st.session_state["session_scored"] = False
+        st.session_state.pop("session_results", None)
         for i, q in enumerate(questions, 1):
             st.write(f"{i}. {q}")
     else:
@@ -97,12 +102,13 @@ if "questions" in st.session_state:
     else:
         st.success("🎉 Mock interview session complete!")
 
-        if "session_scored" not in st.session_state:
+        if "session_scored" not in st.session_state or not st.session_state["session_scored"]:
             with st.spinner("Scoring your answers..."):
                 from feedback_coach_agent import score_session
                 results = score_session(st.session_state["answers"])
                 st.session_state["session_results"] = results
                 st.session_state["session_scored"] = True
+            st.rerun()
 
         st.subheader("📊 Your Results")
         for i, r in enumerate(st.session_state["session_results"], 1):

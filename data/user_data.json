@@ -1,7 +1,92 @@
 {
-  "goal": {},
-  "sessions": [],
-  "weak_areas": {},
-  "study_log": [],
-  "streak": 0
+  "goal": {
+    "role": "AI engineer",
+    "timeline": "4 weeks",
+    "focus_areas": "Python,Machine Learning"
+  },
+  "sessions": [
+    [
+      {
+        "clarity": 8,
+        "structure": 9,
+        "relevance": 9,
+        "confidence": 8,
+        "overall_score": 8,
+        "one_line_feedback": "A concise and accurate explanation; consider briefly elaborating on 'how' the mentioned techniques address bias/variance for deeper insight.",
+        "weak_area": null,
+        "question": "Explain the bias-variance trade-off in machine learning. How do you typically address it when building and evaluating models?",
+        "answer": "The bias-variance trade-off is about balancing **underfitting** (high bias) and **overfitting** (high variance) to achieve good performance on new data. I usually address it by using cross-validation, tuning model complexity, and applying regularization to improve generalization."
+      },
+      {
+        "clarity": 9,
+        "structure": 8,
+        "relevance": 10,
+        "confidence": 9,
+        "overall_score": 9,
+        "one_line_feedback": "Excellent breadth of strategies, effectively covering both single-machine Pandas optimizations and distributed computing solutions for large datasets.",
+        "weak_area": null,
+        "question": "You have a Python script processing a large dataset (e.g., 10GB CSV) for model training. What strategies would you employ to optimize its performance in terms of speed and memory efficiency?",
+        "answer": "For a large dataset, I would read the CSV in chunks using **Pandas**, optimize data types to reduce memory usage, and avoid unnecessary copies of the data. If needed, I would use libraries like **Dask** or **PySpark** for parallel processing to improve speed and handle datasets that do not fit into memory."
+      },
+      {
+        "clarity": 7,
+        "structure": 3,
+        "relevance": 8,
+        "confidence": 6,
+        "overall_score": 4,
+        "one_line_feedback": "Your answer is relevant and hits the key points, but it's too brief and lacks the detailed structure (STAR method) needed to fully showcase your problem-solving process and impact.",
+        "weak_area": "behavioral_star",
+        "question": "Describe a challenging machine learning model deployment you were involved in. What technical or logistical hurdles did you face, and how did you overcome them?",
+        "answer": "In one project, deploying the model as a web API was challenging because of dependency and environment issues. I used a virtual environment, packaged the required libraries correctly, tested the API thoroughly, and learned the importance of consistent deployment environments."
+      },
+      {
+        "clarity": 9,
+        "structure": 8,
+        "relevance": 9,
+        "confidence": 9,
+        "overall_score": 8,
+        "one_line_feedback": "A concise and accurate comparison; consider elaborating on *why* these factors make each model type more suitable for its respective use case.",
+        "weak_area": "technical_depth",
+        "question": "When would you choose a tree-based model (e.g., Random Forest, XGBoost) over a deep learning approach for a supervised learning task, and what factors influence that decision?",
+        "answer": "I would choose a tree-based model like **Random Forest** or **XGBoost** when working with structured tabular data and a relatively small dataset because they are easier to train and interpret. I would consider deep learning only if I had a large dataset with complex data like images, text, or audio, where neural networks usually perform better."
+      },
+      {
+        "clarity": 7,
+        "structure": 4,
+        "relevance": 6,
+        "confidence": 6,
+        "overall_score": 5,
+        "one_line_feedback": "Provide specific examples of communication strategies tailored to different stakeholders and phases of an AI project.",
+        "weak_area": "communication",
+        "question": "How do you ensure effective communication and collaboration with data scientists, other engineers, and product managers throughout the lifecycle of an AI project?",
+        "answer": "I make sure to communicate regularly, share progress and challenges, and document my work clearly so everyone stays aligned. I also attend team meetings, ask questions when needed, and use tools like Git and project trackers to collaborate effectively."
+      }
+    ]
+  ],
+  "weak_areas": {
+    "behavioral_star": 1,
+    "technical_depth": 1,
+    "communication": 1
+  },
+  "study_log": [
+    {
+      "title": "STAR method for interviews: How to practice with AI | Adobe Acrobat",
+      "url": "https://www.adobe.com/acrobat/resources/practice-star-method-interviews-with-ai.html",
+      "topic": "behavioral_star",
+      "done": false
+    },
+    {
+      "title": "Behavioral interviews for Software Engineers: How to prepare | Tech Interview Handbook",
+      "url": "https://www.techinterviewhandbook.org/behavioral-interview",
+      "topic": "behavioral_star",
+      "done": false
+    },
+    {
+      "title": "Software Engineer Behavioral Interview: The Complete 2026 Preparation Guide - AceRound Blog",
+      "url": "https://www.aceround.app/blog/swe-behavioral-interview-ai",
+      "topic": "behavioral_star",
+      "done": false
+    }
+  ],
+  "streak": 1
 }
