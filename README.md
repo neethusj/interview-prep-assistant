@@ -65,7 +65,7 @@ This is a personal-use tool by design. All data (your goal, session history, sco
 ## Project Structure
 
 ```
-interview_prep_assistant/
+interview-prep-assistant/
 ├── app.py
 ├── orchestrator.py
 ├── storage.py
